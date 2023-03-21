@@ -1,0 +1,8 @@
+POST "localhost:4000/api/auth/new"
+content-type: application/json
+
+{
+    "name": "samplfasle",
+    "email": "david@gmail.com",
+    "password": "davidKressin"
+}
