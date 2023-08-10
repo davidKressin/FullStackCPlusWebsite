@@ -1,0 +1,131 @@
+
+
+
+// const getOneProject = async (req, res = response) => {
+//    dbConnection.query(`SELECT * FROM ${req.params.tableName}`, (err, results) => {
+//       if (err) {
+//          console.error("Error al ejecutar la consulta: " + err.stack);
+//          res.status(500).send('Error en el servidor');
+//          return;
+//       }
+//       // results = results.map(result=>result["Tables_in_id19338602_factoria_dev"])
+//       res.json(results);
+//    })
+// }
+
+
+// const crearEvento = async(req, res = response) => {
+
+//    const evento = new Evento(req.body);
+
+//    try {
+//       evento.user = req.uid;
+
+//       const eventoGuardado = await evento.save();
+
+//       res.json({
+//          ok: true, 
+//          evento: eventoGuardado
+//       })
+//    } catch (error) {
+//       console.log(error)
+//       res.status(500).json();
+//    }
+// }
+
+
+// const actualizarEvento = async(req, res = response) => {
+
+//    const eventoId = req.params.id;
+//    const uid = req.uid;
+
+//    try {
+//       const evento = await Evento.findById(eventoId);
+
+//       if(!evento){
+//          return res.status(404).json({
+//             ok: false,
+//             msg: "evento no existe con ese id"
+//          })
+//       }
+
+//       if(evento.user.toString()!== uid){
+//          return res.status(401).json({
+//             ok: false,
+//             msg: "no tiene privilegio de editar este evento"
+//          })
+//       }
+
+//       const nuevoEvento = {
+//          ...req.body,
+//          user: uid
+//       }
+
+//       const eventoActualizado = await Evento.findByIdAndUpdate(eventoId, nuevoEvento, {new: true});
+
+//       res.json({
+//          ok: true,
+//          evento: eventoActualizado
+//       })
+
+//    } catch (error) {
+//       console.log(error);
+//       res.status(500).json({
+//          ok: false,
+//          msg: "hable con el administrador"
+//       })
+//    }
+
+// }
+
+
+
+// const eliminarEvento = async(req, res = response) => {
+//    const eventoId = req.params.id;
+//    const uid = req.uid;
+
+//    try {
+//       const evento = await Evento.findById(eventoId);
+//       if(!evento){
+//          return res.status(404).json({
+//             ok: false,
+//             msg: "evento no existe con ese id"
+//          })
+//       }
+
+//       if(evento.user.toString()!== uid){
+//          return res.status(401).json({
+//             ok: false,
+//             msg: "no tiene privilegio para eliminar este evento"
+//          });
+//       }
+
+//       await Evento.findByIdAndDelete(eventoId);
+
+//       res.json({
+//          ok: true
+//       })
+
+//    } catch (error) {
+//       console.log(error);
+//       res.status(500).json({
+//          ok: false,
+//          msg: "hable con el administrador"
+//       })
+//    }
+
+// }
+
+
+
+
+
+
+
+
+
+impares
+1-4,9-12,17-20,25-28,
+
+pares
+5-8,13-16,21-24,29
