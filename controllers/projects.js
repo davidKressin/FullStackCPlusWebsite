@@ -91,6 +91,15 @@ const getProjectsDataless = async(req, res =response)=>{
   }
 }
 
+const postProjectTracker = async(req, res=response)=>{
+  const {lat, lon, pat}= req.query;
+  // console.log(req.query, typeof lat, typeof lon, typeof pat)
+  const insertQuery = `INSERT INTO fic_tracker (lat, lon, pat) VALUES (${lat}, ${lon}, ${pat})`;
+
+  const result = await executeQuery(insertQuery);
+  return res.status(200).send(result);
+}
+
 
 const executeQuery = (query) => {
   return new Promise((resolve, reject) => {
@@ -108,5 +117,6 @@ const executeQuery = (query) => {
 module.exports = {
   getProjects, 
   getOneProject,
-  getProjectsDataless
+  getProjectsDataless,
+  postProjectTracker
 };
