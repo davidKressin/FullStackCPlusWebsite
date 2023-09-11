@@ -1,4 +1,9 @@
 node_modules/
 
 mongo.txt
+
 .env
+
+peticiones.http
+
+projects.txt
