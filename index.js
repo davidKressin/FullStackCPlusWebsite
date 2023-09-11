@@ -21,7 +21,7 @@ app.use( express.json() );
 
 // Rutas
 app.use('/api/projects', require('./routes/projects') );
-app.use('/*', (req, res)=> res.sendFile(path.join(__dirname,"public/index.html")) );
+app.use('/', (req, res)=> res.sendFile(path.join(__dirname,"public/index.html")) );
 
 // Escuchar peticiones
 app.listen( process.env.PORT, () => {
