@@ -1,6 +1,7 @@
 node_modules/
 
 mongo.txt
+env.txt
 
 .env
 
