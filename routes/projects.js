@@ -21,6 +21,7 @@ router.get('/:tableName', getOneProject);
 
 router.get('/post/tracker', postProjectTracker);
 router.get('/get/tracker', getProjectTracker);
+router.get('/prueba', (req,res)=> res.send("Probando"));
 
 // actualizar
 
