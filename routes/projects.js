@@ -12,6 +12,7 @@ const router = Router();
 
 router.get('/', getProjects);
 router.get('/dataless', getProjectsDataless);
+router.get('/prueba', (req,res)=> res.send("Probando"));
 router.get('/:tableName', getOneProject);
 
 
@@ -21,7 +22,6 @@ router.get('/:tableName', getOneProject);
 
 router.get('/post/tracker', postProjectTracker);
 router.get('/get/tracker', getProjectTracker);
-router.get('/prueba', (req,res)=> res.send("Probando"));
 
 // actualizar
 
