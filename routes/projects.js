@@ -17,7 +17,7 @@ router.get('/:tableName', getOneProject);
 
 // crear 
 // http://factoriaccp.xyz/fic_salud/tracker/scripts/get.php?&lat=%f&lon=%f&pat=%f/
-// http://superusuario.cl/api/projects/post/tracker/?&lat=%f&lon=%f&pat=%f/
+// http://superusuario.cl/api/projects/post/tracker/?&lat=%f&lon=%f&pat=%f&batt=%f
 
 router.get('/post/tracker', postProjectTracker);
 router.get('/get/tracker', getProjectTracker);

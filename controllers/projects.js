@@ -91,16 +91,16 @@ const getProjectsDataless = async (req, res = response) => {
   }
 }
 const getProjectTracker = async (req, res = response) => {
-
-  const infoQuery = `SELECT * FROM fic_tracker`;
+  const patentID = req.query.patent;
+  const infoQuery = `SELECT * FROM fic_tracker ${patentID ? "WHERE pat="+patentID : ""}`;
   const info = await executeQuery(infoQuery);
   res.json(info);
 }
 
 const postProjectTracker = async (req, res = response) => {
-  const { lat, lon, pat } = req.query;
+  const { lat, lon, pat, batt } = req.query;
   // console.log(req.query, typeof lat, typeof lon, typeof pat)
-  const insertQuery = `INSERT INTO fic_tracker (lat, lon, pat) VALUES (${lat}, ${lon}, ${pat})`;
+  const insertQuery = `INSERT INTO fic_tracker (lat, lon, pat, batt) VALUES (${lat}, ${lon}, ${pat}, ${batt})`;
 
   const result = await executeQuery(insertQuery);
   return res.status(200).send(result);
