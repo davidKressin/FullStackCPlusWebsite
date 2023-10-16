@@ -1,5 +1,5 @@
 {
-  "name": "10-calendar-backend",
+  "name": "backend-cplus",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -17,6 +17,7 @@
     "express": "4.18.2",
     "express-validator": "6.15.0",
     "jsonwebtoken": "9.0.0",
+    "marked": "^9.1.2",
     "moment": "2.29.4",
     "mysql": "2.18.1"
   },
