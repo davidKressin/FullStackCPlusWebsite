@@ -13,7 +13,7 @@ const router = Router();
 router.get('/', getProjects);
 router.get('/dataless', getProjectsDataless);
 router.get('/prueba', (req,res)=> res.send("Probando"));
-router.get('/:tableName', getOneProject);
+router.get('/:tableName', async(req, res)=> getOneProject(req, res));
 
 
 // crear 
